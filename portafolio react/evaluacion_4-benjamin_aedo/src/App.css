@@ -1,0 +1,36 @@
+
+#root {
+  min-height: 100vh;
+}
+
+.app__skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  z-index: 200;
+  padding: 0.8rem;
+  color: white;
+  background: var(--green);
+}
+
+.app__skip-link:focus {
+  top: 1rem;
+}
+
+.app__footer {
+  padding: 2rem 1rem;
+  color: var(--muted);
+  background: var(--white);
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+
+.app__footer a {
+  color: var(--green);
+}
+
+@media (max-width: 480px) {
+  .app__footer {
+    font-size: 0.85rem;
+  }
+}
