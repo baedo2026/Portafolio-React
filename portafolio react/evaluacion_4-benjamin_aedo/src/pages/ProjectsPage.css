@@ -1,0 +1,87 @@
+
+.projects-page {
+  width: min(100% - 2rem, 75rem);
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.projects-page__section,
+.projects-page__github {
+  margin-bottom: 5rem;
+}
+
+.projects-page__eyebrow {
+  color: var(--green);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.projects-page__title {
+  color: var(--ink);
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.projects-page__description {
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.projects-page__grid,
+.projects-page__github-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.projects-page__repository {
+  padding: 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
+.projects-page__repository h3 {
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.projects-page__repository p {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.projects-page__repository-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.projects-page__repository a {
+  color: var(--green);
+  font-weight: 700;
+}
+
+.projects-page__repository a:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+
+@media (max-width: 900px) {
+  .projects-page__grid,
+  .projects-page__github-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-page__grid,
+  .projects-page__github-grid {
+    grid-template-columns: 1fr;
+  }
+}
