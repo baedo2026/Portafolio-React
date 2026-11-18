@@ -1,0 +1,21 @@
+.status-message {
+  margin: 1rem 0;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 0.4rem;
+  background: var(--white);
+  color: var(--text);
+}
+
+.status-message--loading {
+  border-left: 4px solid var(--green);
+}
+
+.status-message--success {
+  border-left: 4px solid #36734b;
+}
+
+.status-message--error {
+  border-left: 4px solid #a43d32;
+  color: var(--ink);
+}

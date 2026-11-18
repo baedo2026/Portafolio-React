@@ -1,0 +1,141 @@
+
+.home-page {
+  width: min(100% - 2rem, 75rem);
+  min-height: calc(100vh - 76px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.home-page__hero {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 4rem;
+  padding: 4rem 0;
+}
+
+.home-page__eyebrow {
+  color: var(--green);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.home-page__title {
+  margin: 1rem 0;
+  color: var(--ink);
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  line-height: 1.1;
+}
+
+.home-page__level {
+  color: var(--muted);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.home-page__description,
+.home-page__introduction {
+  max-width: 600px;
+  color: var(--text);
+  line-height: 1.8;
+}
+
+.home-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.home-page__button {
+  display: inline-block;
+  padding: 0.85rem 1.5rem;
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.home-page__button:hover {
+  opacity: 0.85;
+}
+
+.home-page__button--primary {
+  color: #ffffff;
+  background: var(--green);
+}
+
+.home-page__button--secondary {
+  color: var(--green);
+  background: transparent;
+}
+
+.home-page__button--secondary:hover {
+  color: var(--white);
+  background: var(--green);
+}
+
+.home-page__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-page__image {
+  display: block;
+  width: 100%;
+  max-width: 390px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+
+.home-page__button:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    min-height: auto;
+  }
+
+  .home-page__hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 0;
+  }
+
+  .home-page__image-container {
+    grid-row: 1;
+  }
+
+  .home-page__image {
+    max-width: 280px;
+  }
+
+  .home-page__title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page__actions {
+    flex-direction: column;
+  }
+
+  .home-page__button {
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-page__button {
+    transition: none;
+  }
+}
